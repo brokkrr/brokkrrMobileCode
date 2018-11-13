@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Benefits Insurance</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1,viewport-fit=cover">
+      <meta name="keywords" content="">
+   
+   </head>
+   <body>
+      <div data-role="page" id="meinekebenefits_page" class="mprofilebg" style="overflow:hidden;">
+          <div data-role="header" data-hide-during-focus="" class="headertitle" data-position="fixed" data-tap-toggle="false">
+              <div align="left"  class="col-sm-12 col-xs-12 header-padding">
+                  <div class="col-sm-2 col-xs-2 no-padding-left header-margin-top-left-item"> <a href="#menuSidebar"  data-iconpos="notext"><img src="../images/menu.png" class="dl-trigger menu-css"></a></div>
+                  <div class="col-sm-8 col-xs-8" > <h1 align="center" class="meinekeheading">Benefits Insurance</h1></div>
+              </div>
+          </div>
+          <div data-role="main" class="ui-content">
+              <a href="#" id="backtosearch" data-transition="slide" align="left" >Back</a>
+              <div class="container">
+                  <div class="row mlogo" style="">
+                      <div class="col-sm-12 col-xs-12 " align="center"><img id="cmplogo" src=""></div>
+                  </div>
+                  <div class="row ">
+                      <div class="row">
+                          <div class="col-sm-5 col-xs-5 hrlabel"><input data-wrapper-class="zipcode" value="" id="zipcode" type="number" placeholder="Business Zip Code"></div>
+                          <div class="col-sm-7 col-xs-7 lable"><input data-wrapper-class="city" value="" type="text" id="txtcity" disabled placeholder="City"></div>
+                          <textarea id="txtlat" style="display:none;"  rows="50" cols="50" ></textarea>
+                          <textarea id="txtlang" style="display:none;"  rows="50" cols="50" ></textarea>
+                      </div>
+                      <div id="divHometype" class="divbottomstyle">
+                          <div class="col-sm-12 col-xs-12 lable headerfont1">New purchase or currently insured?</div>
+                          <select id="ddlInsurance" Name="Insurance" class="col-sm-12 col-xs-12 lable">
+                              <option value="0">Select</option>
+                              <option value="1">New purchase</option>
+                              <option value="2">Currently insured</option>
+                              
+                          </select>
+                      </div>
+                    
+                      <div id="divEmployee" class="divbottomstyle">
+                          <div class="col-sm-12 col-xs-12 lable headerfont1">Number of employees?</div>
+                          <select id="ddlEmployee" Name="Employee" class="col-sm-12 col-xs-12 lable">
+                              <option value="0">Select</option>
+                              <option value="1">1-25</option>
+                              <option value="2">26-50</option>
+                              <option value="3">51-100</option>
+                              <option value="4">More than 100</option>
+                          </select>
+                      </div>
+                      
+                     
+                      <div id="divHometype" class="divbottomstyle">
+                          <div class="col-sm-12 col-xs-12 lable headerfont1">Industry</div>
+                          <select  id="IndustryName"  Name="IndustryName"  class="col-sm-12 col-xs-12 lable" onchange="meinekeFillSicCodeBenefits()">
+                              <optgroup label=""></optgroup>
+                          </select>
+                      </div>
+                      <div id="SICcodeSelect" class="divbottomstyle">
+                          <div class="col-sm-12 col-xs-12 lable headerfont1">NAICS Code</div>
+                          <select  id="mSubIndustryName" Name="mSubIndustryName" multiple="multiple"  class="col-sm-12 col-xs-12 lable" onchange="meinekeCountSicCodeBenefits()">
+                              <optgroup label=""></optgroup>
+                          </select>
+                      </div>
+                      <!--Industry SIC Code end-->
+                      <div style="magrin-top:10px;"></div>
+                      <div id="divLanguage" class="divbottomstyle">
+                          <select id="ddlLanguage" Name="Language" class="col-sm-12 col-xs-12 lable">
+                              <option value="0">Language</option>
+                              <option selected="selected" value="1">English</option>
+                              <option value="2">Spanish</option>
+                              <option value="3">Chinese(Cantonese)</option>
+                              <option value="4">Chinese(Mandarin)</option>
+                              <option value="5">Korean</option>
+                              <option value="6">Vietnamese</option>		
+                          </select>
+                      </div>
+                      <!--Doc-->
+                      <div class="row">
+                           <div class="col-sm-12 col-xs-12 mutipletxt">
+                            <!--  <label for="fileInput" id="labelfileInput" class="custom-file-upload">
+                             
+                              </label>-->
+                            <input id="fileInput" type="text" value="" data-wrapper-class="ui-custom" placeholder="Upload Document" disabled>
+                                <img id="labelfileInput" class="browseimg1" src="../images/browse.png" >
+                            
+                              <div id="errordiv" style="color:red"></div>
+                              <textarea id="getfileconversion" style="display:none;" rows="50" cols="50"></textarea>
+                          </div>
+                      </div>
+                      <!--Doc-->
+                      <div class="col-sm-12 col-xs-12 lable hrlabel"><textarea data-wrapper-class="txtarea1" cols="60" rows="8" name="" id="txtNotes"  data-mini="true" Placeholder="Enter any notes"></textarea></div>
+                      
+                      
+                      <div class="row">
+                          <div class="col-sm-1 col-xs-1" ></div>
+                          <div class="col-sm-10 col-xs-10" align="center">
+                              
+                              <a href="#" id="savemeinekeBenefitsInsurance" style="text-decoration:none;" data-transition="slide">
+                                  <button type="button" class="btn btn-block  loginbtn">Submit to brokkrrs</button>
+                              </a>
+                          </div>
+                          <div class="col-sm-1 col-xs-1"></div>
+                      </div> 
+                  </div>
+                  <div id="footerbenefits" style="margin-top:5%;margin-bottom:2%;">
+                      <div class="col-sm-3 col-xs-3 apspfooterlogo"> <img id="apspfooterlogo" class="mimagefooter" src="" /></div>
+                      <div class="col-sm-2 col-xs-2"></div>
+                      <div class="col-sm-6 col-xs-6 footeralign" style="">
+                          <div class="col-sm-12 col-xs-12" ><img class="mimagefooter footeralign" src="../images/brokkrr-logo-powered-by.png" /></div>
+                          <div class="col-sm-12 col-xs-12 footertext" ><span class="footermms footertxtalign">-Match, Meet, Secure</span></div>
+                      </div>
+                  </div>
+
+                  <div data-role="popup" id="ConfirmPictureInfopopup" data-theme="a" class="ui-corner-all infopopup">
+                      <div class="content">
+                          <h4>Change Picture</h4>
+                          <hr class="hrcolor">
+                          <div class="okbtn" id="OpenCamera">
+                              <a href="#"    style="text-align:center;text-decoration:none;">
+                                  <div class="Messagebtn"> Camera</div><br>
+                              </a>
+                          </div>
+                          <div class="okbtn" id="OpenGallery">
+                              <a href="#"   style="text-align:center;text-decoration:none;">
+                                  <div class="Messagebtn"> Gallery</div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div data-role="popup" data-history="false" id="InfopopupBenefits" data-theme="a" class="ui-corner-all infopopup">
+                      <div class="content">
+                          <h4>Message</h4>
+                          <hr class="hrcolor">
+                          <label for="messagetext"></label>
+                          
+                          <br>
+                          <div class="okbtn">
+                              <a href="#" id="OkbtnBenefits" style="text-align:center;text-decoration:none;" data-transition="slide">
+                                  <div class="Messagebtn"> OK</div>
+                              </a>
+                          </div>
+                      </div>	
+                  </div>
+                  
+              </div><!-- container -->
+              <!--footer-->
+              <div class="row">
+                  <div class="mimgfooter insfooter benefitfooter" id="mfooterbenefits" align="left" data-tap-toggle="false" style="">
+                      <!--footer-->
+                  
+                          <div class="col-sm-3 col-xs-3 footerlogo"> <img id="footerlogo" class="mimagefooter" src="" /></div>
+                          <div class="col-sm-2 col-xs-2"></div>
+                          <div class="col-sm-6 col-xs-6 footeralign footermbenefit" >
+                              <div class="col-sm-12 col-xs-12" ><img class="mimagefooter footeralign" src="../images/brokkrr-logo-powered-by.png" /></div>
+                              <div class="col-sm-12 col-xs-12 footertext" ><span class="footermms footertxtalign">-Match, Meet, Secure</span></div>
+                          </div>
+                   
+                  </div>
+              </div>
+              <!--footer-->
+          </div><!-- content-->
+          
+         
+          
+          <div id="menuSidebar" data-role="panel" data-position="left" data-position-fixed="true" data-display="overlay" data-theme="a" >
+              <div class="row hambermenuprofileimg">
+                  <div class="col-sm-2 col-xs-2"></div>
+                  <div class="col-sm-8 col-xs-8">
+                      <img src="" id="profilepicCustomer" class="circle img-circle noborder" alt="" width="120" height="125">
+                          </div>
+                  <div class="col-sm-2 col-xs-2"></div>
+                  <div class="cleardiv"></div>
+                  <div class="col-sm-12 col-xs-12" style="text-align:center!important;padding-bottom:4px;">
+                      <span class="cls20pxboldwhite" style="color:#ffffff!important;" id="txtCustomerName"></span>
+                  </div>
+                  <div class="cleardiv"></div>
+              </div>
+              <br/>
+              <div class="cleardiv"></div>
+              
+              <ul data-role="listview" data-icon="false"  id="menulinks">
+                  <li class="menuborder">
+                      <a href="meinekelines.html" data-transition="slide" class="menuli"> <img src="../images/search.png" class="menuimg imageClass"><span class="menutext">Search brokkrr</span>
+                      </a>
+                  </li>
+                  <li >
+                      <a href="meinekeprofileCustomer.html" data-transition="slide" class="menuli">  <img src="../images/profile.png" class="menuimg imageClass"> <span class="menutext"> My Profile</span>
+                      </a>
+                  </li>
+                  <li >
+                      <a href="briefcase.html" data-transition="slide" class="menuli"><img src="../images/briefcase.png" class="menuimg imageClass"><span class="menutext"> Brokrrr's briefcase</span><span class="unReadvdoCountMenu" id="briefcasecntmenu" ></span>
+                          </a>
+                  </li>
+                  <li>
+                      <a href="customerMessage.html" data-transition="slide" class="menuli"> <img src="../images/messages.png" class="menuimg imageClass"><span class="menutext">Messages</span><div class="unReadCountMenu" id="benefitsCustomertotalunreadcountmenu"></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="customerLogout.html" data-transition="slide" class="menuli"> <img src="../images/logout.png" class="menuimg imageClass"><span class="menutext"> Logout</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="menuli"> </a>
+                  </li>
+              </ul>
+          </div>
+          
+      </div><!-- /page -->
+   </body>
+</html>

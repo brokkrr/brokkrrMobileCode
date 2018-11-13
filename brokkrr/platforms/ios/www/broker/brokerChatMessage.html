@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Brokkrr Chat Message</title>
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,viewport-fit=cover">
+   </head>
+   <body>
+    <div data-role="page" id="brokerChatMessagePage" class="chatBg" >
+      
+       <div  class="headertitle" data-role="header" data-position="fixed" data-tap-toggle="false"  data-hide-during-focus="">
+            <div data-tap-toggle="false" data-position="fixed" class="chatheadingtop" style="padding-left:3%;padding-top:3%;padding-right:2%;" >
+                <span id="BrokerChatMessageBackBtn" >
+                    <a href="#" data-iconpos="notext">
+                        <img src="../images/backbtn.png" style="width: 1.3rem"  class="dl-trigger bkBtn">
+                    </a>
+                </span>
+     	       	  
+                  <div style="margin-top:-3%;" align="center" class="chatHeading msgchatheading">
+                      <span class="heading capitalText" align="center" id="headname"></span>
+     
+                    <a href="#" style="margin-top:-3%;" class="chatHeading" data-iconpos="notext">
+                        <span class="imgright">
+                            <img  src="../images/delete.png" style="display:none;" id="deletechatbroker" width="18px" height="18px">
+                        </span>
+                    </a>
+                  </div>
+                  <div class="cleardiv"></div>
+            </div>
+       </div>
+       
+       <div data-role="main" class="ui-content SearchContent" >
+           
+           <div class="container lable hrlabel">
+               <div class="row">
+                   <div id="chatdiv">
+                       <div class="col-sm-12 col-xs-12" id="chat1"></div>
+                   </div>
+               </div>
+               <div class="keyboard" style="height: 0">&nbsp;</div>
+	       </div> <!-- container -->
+ 
+       </div><!-- content-->
+       
+       <div data-role="popup" id="InfopopupChatBrokerMessage" data-history="false" data-theme="a" class="ui-corner-all infopopup">
+           <div class="content">
+   			 <h4>Message</h4>
+  			 <hr>
+  			 <label for="messagetext"></label>
+             <br>
+             <div class="okbtn">
+                <a href="#" id="OkbtnChatBrokerMessage"   style="text-align:center;text-decoration:none;">
+		  		<div class="forgetbtn16px"> OK</div>
+                </a>
+             </div>
+           </div>
+       </div>
+       <div data-role="popup" id="Infopopupdoc" data-history="false" class="ui-corner-all viewdocpopup" data-theme="a" data-position-to="origin" >
+         
+           <div class="content" style="background:#fff!important;" >
+               <h6><b>Declaration</b></h6>
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+               <hr/>
+               <div class="pinch-zoom-container">
+                   <img id="declarationpath" class="pinch-zoom-image" onload="onLoad()"
+                       src="">
+                       </div>
+              <!-- <div >
+              <img style="width:100%;height:100%;" src="" id="declarationpath"/>
+               <br>
+               </div>-->
+           </div>
+       </div>
+       
+       <!-- Modal Pop up for Error Message
+       <div id="Infopopupdoc" class="modal" style="z-index:999999;height:100%!important">
+           <div class="modal-content" align="center"  style="background-color:#FFFFFF;">
+               <div class="modal-header">
+                   <h4 class="modal-title">Declaration</h4>
+               </div>
+               <div data-theme="d" align="center" class="ui-content" style="background-color:#FFFFFF;">
+                   <img class="imgClass" src="" id="declarationpath"/>
+                   
+                   <div class="cleardiv"></div>
+               </div>
+           </div>
+       </div>-->
+
+       <div data-role="footer" data-position="fixed" data-tap-toggle="false" id="chatfooter" style="margin-top:2%!important;margin-bottom:0%;background:none!important;border:none" class="classinputchat">
+            <div class="row"  id="divMessage" style="background:#fff!important;">
+                <div class="col-sm-11 col-xs-11 lable hrlabel" id="divPart1">
+                    <div class="inputtextbox">
+                        <textarea type="text" id="brokerChatcontent"  Placeholder="Write your message here" style="border: 1px solid #17d1ff!important;font-weight:normal;font-size:16px;" >
+                        </textarea>
+                    </div >
+                </div>
+                <div id="brokerChatEnter" class="col-sm-1 col-xs-1 lable hrlabel chatBtnTop" style="margin-left:-5%;" id="divPart2">
+                    <a href="#"  style="text-decoration:none;">
+                        <img src="../images/Chatimg.png" >
+                    </a>
+                </div>
+            </div>
+      
+            <div class="row" style="display:none;" id="divError" >
+                <div class="col-sm-12 col-xs-12">
+                    <div class="inputtextbox1">
+                        <textarea rows="3" name="comment" id="brokerChatcontentError" class="inputtextbox2"></textarea>
+                    </div >
+                </div>
+            </div>
+
+       </div>
+       
+       <div data-role="popup" data-history="false" id="deleteconfirmpopupbroker" data-theme="a" class="ui-corner-all infopopup">
+           <div class="content">
+   			 <h4>Information</h4>
+             <hr class="hrcolor">
+             <label for="messagetextdeletecon"></label>
+             <br>
+             <div class="row">
+                <div class="col-sm-12 col-xs-12" align="center">
+                    <div class="col-sm-1 col-xs-1"></div>
+                    <div class="col-sm-5 col-xs-5">
+                        <a href="#" id="deletemessagesconfirmbroker"  style="text-decoration:none;width:100%;" data-transition="slide">
+                            <div class="Messagebtn1"> Confirm</div>
+                        </a>
+                    </div>
+                    <div class="col-sm-5 col-xs-5">
+                        <a href="#" id="deleteconfirmpopupclosebroker" style="text-decoration:none;width:100%;" data-transition="slide">
+                        <div class="Messagebtn1"> Cancel</div></a>
+                    </div>
+                    <div class="col-sm-1 col-xs-1"></div>
+                </div>
+      		</div>
+      		
+  		</div>	
+       </div>
+       
+      </div><!-- /page -->
+   </body>
+</html>

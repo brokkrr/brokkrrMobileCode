@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Edit Profile</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1,viewport-fit=cover">
+      <meta name="keywords" content="">
+    
+     
+   </head>
+   <body>
+      <div data-role="page" id="meinekeCustomerProfileEditPage" class="mprofilebg mpageheight">
+          <div data-role="header" data-hide-during-focus="" class="headertitle" data-position="fixed" data-tap-toggle="false" >
+              <div align="left"  class="col-sm-12 col-xs-12 header-padding">
+                  <div class="col-sm-2 col-xs-2 no-padding-left header-margin-top-left-item"> <a href="#menuSidebar"  data-iconpos="notext"><img src="../images/menu.png" class="dl-trigger menu-css"></a></div>
+                  <div class="col-sm-8 col-xs-8" > <h1 align="center" class="heading">Edit Profile</h1></div>
+                  <div class="imgSearch" class="col-sm-2 col-xs-2" >
+                      <a href="#"  data-iconpos="notext" style="display:none;"><img src="../images/search.png" width="15px" height="15px"></a>&nbsp;&nbsp;&nbsp;
+                  </div>
+                  
+                  <div class="profileEdit" class="imgSearch col-sm-2 col-xs-2" >
+                      <a href="#"  data-iconpos="notext" id="editCustomer" style="display:none;">Edit</a>
+                  </div>
+              </div>
+          </div>
+          <div data-role="main" class="ui-content" >
+              <div class="row mlogo">
+                  <div class="col-sm-12 col-xs-12 " align="center"><img id="cmplogo" src=""></div>
+              </div>
+              <div class="row" style="margin-top:-15px;">
+                  <div class="col-sm-12 col-xs-12" align="center">
+                      <img id="profilepicprofile" src="../images/customer.jpg" class="circle img-circle" alt="" width="110" height="115" style="margin-top:5px!important;">
+                       <a href="#" id="profilePhotoimg" style="font-size:16px;font-family:Helvetica !important;text-shadow:none !important;color:#17d1ff !important;">Change Picture</a>
+                   </div>
+              </div>
+              <div class="container" style="height:400px;">
+                  <div class="row">
+                      <div class="col-sm-12 col-xs-12 rowalign"><input id="txtfname" name="firstname" value="" type="text"  data-wrapper-class="ui-custom" maxlength="50"  placeholder="First Name" ></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input id="txtlname" name="lastname" value="" type="text"  data-wrapper-class="ui-custom" maxlength="50"  placeholder="Last Name" ></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input type="number" id="txtphone" value="" data-wrapper-class="ui-custom"  placeholder="Phone"></div>
+                      <div class="row">
+                          <div class="col-sm-5 col-xs-5 hrlabel" ><input data-wrapper-class="zipcode" value="" id="txtzip" type="number" placeholder="Zip Code"></div>
+                          <div class="col-sm-7 col-xs-7 lable"><input data-wrapper-class="city" value="" type="text" id="txtcity"  disabled placeholder="City" class="disablefield"></div>
+                      </div>
+                      <div class="cleardiv"></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input type="email" id="email" value="" data-wrapper-class="ui-custom"  placeholder="Email" class="disablefield" disabled></div>
+                      <div class="cleardiv"></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input type="text" id="Companyname" value="" data-wrapper-class="ui-custom"  placeholder="Company Name"></div>
+                      <div class="cleardiv"></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input id="address" type="text" value="" data-wrapper-class="ui-custom"  placeholder="Address"></div>
+                      
+                      <div class="cleardiv"></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input id="Website" type="text" value="" data-wrapper-class="ui-custom"  placeholder="Website"></div>
+                      
+                      <div class="cleardiv"></div>
+                      
+                      <div class="col-sm-12 col-xs-12 lable headerfont1">Number of Employees</div>
+                      <select id="NumberofEmployees" Name="NumberofEmployees" class="col-sm-12 col-xs-12 lable">
+                          <option selected="selected" value="0">Select</option>
+                          <option value="1-10">1-10</option>
+                          <option value="11-20">11-20</option>
+                          <option value="21-50">21-50</option>
+                          <option value="50+">50+</option>
+                      </select>
+                      <div class="cleardiv"></div>
+                      
+                      
+                      <div class="col-sm-12 col-xs-12 lable headerfont1">Est Premium</div>
+                      <select id="EstPremium" Name="EstPremium" class="col-sm-12 col-xs-12 lable">
+                          <option selected="selected" value="0">Select</option>
+                          <option value="1-5k">1-5k</option>
+                          <option value="5-20k">5-20k</option>
+                          <option value="20-50k">21-50k</option>
+                          <option value="50k+">50k+</option>
+                      </select>
+                      <div class="cleardiv"></div>
+                      
+                      <!-- <div id="divNoofcars" class="col-sm-12 col-xs-12 rowalign"><input type="number" value="" id="inpNoofcars" data-wrapper-class="ui-custom"  placeholder="No of cars"></div>
+                      <div class="cleardiv"></div>
+                      
+                     <div class="col-sm-12 col-xs-12 lable headerfont1">Occupation</div>
+                      <select id="Occupation" Name="Occupation" class="col-sm-12 col-xs-12 lable">
+                          <option selected="selected" value="0">Select</option>
+                          <option value="Employed">Employed</option>
+                          <option value="Self Employed">Business Owner</option>
+                      </select>
+                      <div class="cleardiv"></div>-->
+                      
+                  </div>
+                  <br/>
+                   <div class="cleardiv"></div>
+                  <div class="row">
+                      <div class="col-sm-1 col-xs-1" ></div>
+                      <div class="col-sm-10 col-xs-10" align="center">
+                          
+                          <a href="#" id="customerUpdateProfile" style="text-decoration:none;" data-transition="slide">
+                              <button type="button" class="btn btn-block  loginbtn">Save &&nbsp;Find brokkrrs</button>
+                                  </a>
+                                  </div>
+                                  <div class="col-sm-1 col-xs-1"></div>
+                            </div>
+                   <div class="cleardiv"></div>
+                  <textarea id="edittxtprofilepic" style="display:none;" rows="50" cols="50" ></textarea>
+                  <!--footer-->
+                  <div class="row" >
+                      <div class="mimgfooter insfooter" id="mfootereditprofile" align="left" data-tap-toggle="false" >
+                          <!--footer-->
+                          
+                          <div class="col-sm-3 col-xs-3 footerlogo"> <img id="footerlogo" style="" class="mimagefooter apfooter" src="" /></div>
+                          <div class="col-sm-2 col-xs-2"></div>
+                          <div class="col-sm-6 col-xs-6 footeralign footerap" >
+                              <div class="col-sm-12 col-xs-12" ><img class="mimagefooter footeralign" src="../images/brokkrr-logo-powered-by.png" /></div>
+                              <div class="col-sm-12 col-xs-12 footertext" ><span class="footermms footertxtalign">-Match, Meet, Secure</span></div>
+                          </div>
+                          
+                      </div>
+                  </div>
+                  <!--footer-->
+                 
+                 
+          </div><!-- content -->
+             
+       </div><!-- Main-->
+          
+          
+          
+          
+          <div id="menuSidebar" data-role="panel" data-position="left" data-position-fixed="true" data-display="overlay" data-theme="a" style="padding-top:30px;">
+              <div class="row hambermenuprofileimg">
+                  <div class="col-sm-2 col-xs-2"></div>
+                  <div class="col-sm-8 col-xs-8">
+                      <img src="" id="profilepicCustomer" class="circle img-circle noborder" alt="" width="120" height="125">
+                          </div>
+                  <div class="col-sm-2 col-xs-2"></div>
+                  <div class="cleardiv"></div>
+                  <div class="col-sm-12 col-xs-12" style="text-align:center!important;padding-bottom:4px;">
+                      <span class="cls20pxboldwhite" style="color:#ffffff!important;" id="txtCustomerName"></span>
+                  </div>
+                  <div class="cleardiv"></div>
+              </div>
+              <br/>
+              <div class="cleardiv"></div>
+              <ul data-role="listview" data-icon="false"  id="menulinks">
+                  <li>
+                      <a href="meinekelines.html" data-transition="slide" class="menuli"> <img src="../images/search.png" class="menuimg imageClass"><span class="menutext">Search brokkrr</span>
+                      </a>
+                  </li>
+                  <li >
+                      <a href="meinekeprofileCustomer.html" data-transition="slide" class="menuli"> <img src="../images/profile.png" class="menuimg imageClass"><span class="menutext"> My Profile</span>
+                      </a>
+                  </li>
+                  <li >
+                      <a href="briefcase.html" data-transition="slide" class="menuli"><img src="../images/briefcase.png" class="menuimg imageClass"><span class="menutext"> Brokrrr's briefcase</span><span class="unReadvdoCountMenu" id="briefcasecntmenu" ></span>
+                          </a>
+                  </li>
+                  <li>
+                      <a href="customerMessage.html" data-transition="slide" class="menuli"> <img src="../images/messages.png" class="menuimg imageClass"><span class="menutext">Messages</span><div class="unReadCountMenu" id="EditProfileCustomertotalunreadcountmenu"></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="customerLogout.html" data-transition="slide" class="menuli"> <img src="../images/logout.png" class="menuimg imageClass"><span class="menutext"> Logout</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="menuli"> </a>
+                  </li>
+              </ul>
+              
+              
+              <div data-role="popup" id="CustConfirmPictureInfopopup" data-theme="a" class="ui-corner-all infopopup">
+                  <div class="content">
+                      <h4>Change Picture</h4>
+                      <hr class="hrcolor">
+                      <div class="okbtn" id="OpenCameracust">
+                          <a href="#"    style="text-align:center;text-decoration:none;">
+                              <div class="Messagebtn"> Camera</div><br>
+                          </a>
+                      </div>
+                      <div class="okbtn" id="OpenGallerycust">
+                          <a href="#"   style="text-align:center;text-decoration:none;">
+                              <div class="Messagebtn"> Gallery</div>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+              <div data-role="popup" data-history="false" id="InfopopupEditCustomerProfile" data-theme="a" class="ui-corner-all infopopup">
+                  <div class="content">
+                      <h4>Message</h4>
+                      <hr class="hrcolor">
+                      <label for="messagetext"></label>
+                      <br>
+                      <div class="okbtn">
+                          <a href="#" id="OkbtnEditCustomerProfile" style="text-align:center;text-decoration:none;" data-transition="slide">
+                              <div class="Messagebtn"> OK</div>
+                          </a>
+                      </div>
+                  </div>	
+              </div>
+          </div>
+   </div><!--Page-->
+   </body>
+</html>

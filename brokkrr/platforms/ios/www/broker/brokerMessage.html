@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Brokkrr Message</title>
+      <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,viewport-fit=cover">
+   </head>
+   <body>
+       <div data-role="page" id="brokerMessagePage" class="" style="background-color:#f5f5f5;">
+           <div id="messageheader" data-role="header" data-hide-during-focus="" class="headertitle" data-position="fixed" data-tap-toggle="false">
+               <div align="left"  class="col-sm-12 col-xs-12 header-padding">
+                   <div class="col-sm-2 col-xs-2 no-padding-left header-margin-top-left-item">
+                       <a href="#menuSidebar"  data-iconpos="notext"><img src="../images/menu.png" class="dl-trigger menu-css"></a>
+                   </div>
+                   
+                   <div class="col-sm-4 col-xs-4" align="center" style="padding:0%;margin-left:12%;">
+                       <span class="heading" style="padding:0;margin:0;">Messages</span>
+                       <span class="circlecountspan">
+                           <div id="Brokertotalunreadcount" class="unReadCount" style=""></div>
+                       </span>
+                   </div>
+                   
+                   <div  class="imgSearch col-sm-2 col-xs-2" >
+                       <a href="#" id="deletemessages" data-iconpos="notext">
+                           <img src="../images/msgedit.png" width="22px" height="22px">
+                       </a>
+                       <a href="#"  data-iconpos="notext">
+                           <img src="../images/delete.png" id="deletemultiplemsg" width="22px" height="22px">
+                       </a>
+                   </div>
+                   
+                   <div  class="imgSearch col-sm-2 col-xs-2" >
+                       <a href="../broker/profileBroker.html" data-transition="slide" data-iconpos="notext">
+                           <img src="../images/Home.png" width="22px" height="22px" >
+                        </a>
+                   </div>
+               </div>
+           </div>
+          
+    <!--
+  	<div id="messageSearchheader" data-role="header" class="headertitle" data-position="fixed" data-tap-toggle="false" >
+       <div  data-tap-toggle="false" data-position="fixed" class="header-padding" >
+     	 <div class="inputimg" style="padding-top:5%!important;">
+     	   <a href="#" id="brokerBackbtn" style="text-decoration:none;" data-transition="slide">
+     	 	<img class="inputimage" src="../images/back.png" alt="Back">
+     	 	</a>
+	     	<input type="text" placeholder="Search" id="SearchBar" style="padding-left:8%!important;">
+	     	 <a href="#" style="text-decoration:none;" data-transition="slide">
+	     	</a>
+     	 </div>
+ 
+    </div>	
+    </div>-->
+  		
+        <div data-role="main" class="ui-content">
+            <div class="container lable hrlabel">
+                <ul id="brokerMeassage" data-role="listview" class="ui-listview">
+                </ul>
+                <div data-role="popup" id="deleteconfirmpopupBrokerMessage" data-theme="a" data-history="false" class="ui-corner-all infopopup">
+                    <div class="content">
+                        <h4>Information</h4>
+                        <hr class="hrcolor">
+                        <label for="messagetextdeletecon"></label>
+                        <br>
+                        
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12" align="center">
+                                <div class="col-sm-1 col-xs-1"></div>
+                                <div class="col-sm-5 col-xs-5">
+                                    <a href="#" id="deletemessagesconfirmBrokerMessage"  style="text-decoration:none;width:100%;" data-transition="slide">
+                                        <div class="Messagebtn1"> Confirm</div>
+                                    </a>
+                                </div>
+                                
+                                <div class="col-sm-5 col-xs-5">
+                                    <a href="#" id="deleteconfirmpopupcloseBrokerMessage" style="text-decoration:none;width:100%;" data-transition="slide">
+                                        <div class="Messagebtn1"> Cancel</div></a>
+                                </div>
+                                <div class="col-sm-1 col-xs-1"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div data-role="popup" id="InfopopupBrokerMessage" data-history="false" data-theme="a" class="ui-corner-all infopopup">
+                    <div class="content">
+                        <h4>Message</h4>
+                        <hr class="hrcolor">
+                        <label for="messagetext"></label>
+                        <div class="row">
+                            <div class="col-sm-1 col-xs-1" ></div>
+                            <div class="col-sm-10 col-xs-10" align="center">
+                                <a href="#" id="OkbtnBrokerMessage" style="text-decoration:none;" data-transition="slide">
+                                    <button type="button" class="btn btn-block  loginbtn ">OK</button>
+                                </a>
+                            </div>
+                            <div class="col-sm-1 col-xs-1"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div><!-- container -->
+        </div><!-- content-->
+        
+        <div id="menuSidebar" data-role="panel" data-position="left" data-position-fixed="true" data-display="overlay" data-theme="a">
+            
+            <div class="row hambermenuprofileimg">
+                <div class="col-sm-4 col-xs-4"></div>
+                <div class="col-sm-8 col-xs-8">
+                    <img src="" id="profilepic" class="circle img-circle noborder" alt="" width="120" height="125">
+                </div>
+                
+                <div class="cleardiv"></div>
+                <div class="col-sm-12 col-xs-12" style="text-align:center!important;padding-bottom:4px;">
+                    <span class="cls20pxboldwhite" style="color:#ffffff!important;" id="name"></span>
+                </div>
+                <div class="cleardiv"></div>
+            </div>
+            <br/>
+            <div class="cleardiv"></div>
+            
+            <ul data-role="listview" data-icon="false"  id="menulinks">
+                <li class="menuborder">
+                    <a href="profileBroker.html" data-transition="slide" class="menuli"><img src="../images/profile.png" class="menuimg imageClass"><span class="menutext"> My Profile</span>
+                    </a>
+                </li>
+                <li class="menuborder">
+                    <a href="briefcase.html" data-transition="slide" class="menuli"><img src="../images/briefcase.png" class="menuimg imageClass"><span class="menutext">Brokkrr's briefcase</span><span class="unReadvdoCountMenu" id="briefcasecntmenu" ></span>
+                        </a>
+                </li>
+                <li>
+                    <a href="brokerMessage.html" data-transition="slide" class="menuli"> <img src="../images/messages.png" class="menuimg imageClass"><span class="menutext">Messages</span><div class="unReadCountMenu" id="Brokertotalunreadcountmenu"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="brokerLogout.html" data-transition="slide" class="menuli"> <img src="../images/logout.png" class="menuimg imageClass"><span class="menutext"> Logout</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menuli"> </a>
+                </li>
+            </ul>
+            
+        </div>
+        
+      </div><!-- /page -->
+   </body>
+</html>

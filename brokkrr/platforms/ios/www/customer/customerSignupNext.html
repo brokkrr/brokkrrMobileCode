@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Customer Signup</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1,viewport-fit=cover">
+      <meta name="keywords" content="">
+    </head>
+   <body>
+      <div data-role="page" id="SignupCustomerNext" class="mprofilebg mpageheight">
+          <div data-role="header" data-hide-during-focus=""  class="headertitle" data-position="fixed" data-tap-toggle="false">
+              <div align="left"  class="col-sm-12 col-xs-12 header-padding">
+                  <div class="col-sm-2 col-xs-2 no-padding-left header-margin-top-left-item" id="csignupbckbtn">
+                      <a href="#" data-transition="slide" data-iconpos="notext" class="backbtn NoTextShadow"><img src="../images/backbtn.png" style="width: 1.3rem" class="dl-trigger"></a>
+                  </div>
+                  <div class="col-sm-8 col-xs-8" > <h1 align="center" class="heading">Signup</h1></div>
+              </div>
+          </div>
+          <div data-role="main" class="ui-content" >
+              <div class="row" style="margin-top:-15px;">
+                  <div class="col-sm-12 col-xs-12" align="center">
+                      <img id="profilepicprofile" src="../images/customer.jpg" class="circle img-circle" alt="" width="110" height="115" style="margin-top:5px!important;">
+                          <a href="#" id="profilePhotoimg" style="font-size:14px;font-family:Helvetica !important;text-shadow:none !important;color:#17d1ff !important;">Change Picture</a>
+                          </div>
+              </div>
+              <div class="container" style="height:400px;">
+                  <div class="row">
+                      <div class="col-sm-12 col-xs-12 rowalign"><input id="firstname" name="firstname" value="" type="text"  data-wrapper-class="ui-custom" maxlength="50"  placeholder="First Name" ></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input id="lastname" name="lastname" value="" type="text"  data-wrapper-class="ui-custom" maxlength="50"  placeholder="Last Name" ></div>
+                      <div class="col-sm-12 col-xs-12 rowalign"><input type="number" id="phone" value="" data-wrapper-class="ui-custom"  placeholder="Phone"></div>
+                      <div class="row">
+                          <div class="col-sm-5 col-xs-5 hrlabel"><input data-wrapper-class="zipcode" value="" id="zipid" type="number" placeholder="Zip Code"></div>
+                          <div class="col-sm-7 col-xs-7 lable"><input data-wrapper-class="city" value="" type="text" id="txtcity" disabled placeholder="City" style="background-color:#F7F7F7!important;border-bottom:1px #d7d7d7 solid !important;"></div>
+                      </div>
+                      
+                      <div class="col-sm-12 col-xs-12 rowalign"><input type="email" id="email" value="" data-wrapper-class="ui-custom"  placeholder="Email"></div>
+                  </div>      
+                  <br/>
+
+                  <div class="row">
+                      <div class="col-sm-1 col-xs-1" ></div>
+                      <div class="col-sm-10 col-xs-10" align="center">
+                          
+                          <a href="#" id="CustomerSignupNext" style="text-decoration:none;" data-transition="slide">
+                              <button type="button" class="btn btn-block  loginbtn">Submit</button>
+                          </a>
+                      </div>
+                      <div class="col-sm-1 col-xs-1"></div>
+                  </div>
+                  
+                  <div data-role="popup" data-history="false" id="InfopopupCustomerSignupNext" data-theme="a" class="ui-corner-all infopopup">
+                      <div class="content">
+                          <h4>Message</h4>
+                          <hr class="hrcolor">
+                          <label for="messagetext"></label>
+                          
+                          <br>
+                          <div class="okbtn">
+                              <a href="#" id="OkbtnSignupNext" style="text-align:center;text-decoration:none;" data-transition="slide">
+                                  <div class="Messagebtn"> OK</div>
+                              </a>
+                          </div>
+                      </div>	
+                  </div>
+                  <textarea id="edittxtprofilepic" style="display:none;" rows="50" cols="50" ></textarea>
+              </div><!-- container -->
+          </div><!-- content-->
+      </div><!-- /page -->
+   </body>
+</html>
